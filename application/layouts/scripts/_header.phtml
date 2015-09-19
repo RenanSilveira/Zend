@@ -1,0 +1,65 @@
+<?php echo $this->doctype() ?>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php 
+        echo $this->headTitle('Painel de Gerenciamento'); 
+        
+        //Adiciona arquivos JavaScrip
+        $this->headScript()->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js');
+        $this->headScript()->appendFile('js/bootstrap.js');
+        echo $this->headScript();
+        
+        //Adiciona arquivos CSS
+        $this->headLink()->appendStylesheet('css/bootstrap.css');
+        $this->headLink()->appendStylesheet('css/style.css');
+        echo $this->headLink();
+        ?>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Gerenciador</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Gerenciador</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index">Painel<span class="sr-only">(current)</span></a></li>
+                        <!--li><a href="#">Usuários</a></li-->
+                            <li class="dropdown">
+                                <a href="usuario" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Usuários <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="usuario">Listar usuários</a></li>
+                                    <li><a href="#">Criar usuário</a></li>
+                                    <li><a href="#">Deletar usuário</a></li>
+                                    <li><a href="#">Alterar usuário</a></li>
+                                </ul>
+                            </li>
+                           
+                            <li><a href="content/upload/">Upload<span class="sr-only">(current)</span></a></li>
+                        <li><a href="content/analise/">Análise<span class="sr-only">(current)</span></a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Olá, <?php echo $_SESSION['nome']; ?><span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">                                
+                                <li><a href="content/usuario/">Minha Conta</a></li>
+                                <li class="divider"></li>
+                                <li><a href="../logout.php">Sair</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
