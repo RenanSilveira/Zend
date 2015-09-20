@@ -24,3 +24,7 @@ table.borda tr td {/*border:1px solid #bfbfbf;*/ text-align: center;}
 .s80{background-color: #ff6400; color:#fff;}
 .s90{background-color: #ff3200; color:#fff;}
 .s100{background-color: #ff0000; color:#fff; }
+
+.glyphicon{
+    margin-right: 5px;
+}

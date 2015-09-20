@@ -34,29 +34,29 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index">Painel<span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="<?php echo $this->url(array('controller' => 'Index', 'action' => 'index'), null, true)?>"><span class="glyphicon glyphicon-home"></span>Painel</span></a></li>
                         <!--li><a href="#">Usuários</a></li-->
                             <li class="dropdown">
-                                <a href="usuario" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Usuários <span class="caret"></span></a>
+                                <a href="<?php echo $this->url(array('controller' => 'Usuario', 'action' => 'index'), null, true)?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>Usuários</a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="usuario">Listar usuários</a></li>
+                                    <li><a href="<?php echo $this->url(array('controller' => 'Usuario', 'action' => 'index'), null, true)?>">Listar usuários</a></li>
                                     <li><a href="#">Criar usuário</a></li>
                                     <li><a href="#">Deletar usuário</a></li>
                                     <li><a href="#">Alterar usuário</a></li>
                                 </ul>
                             </li>
                            
-                            <li><a href="content/upload/">Upload<span class="sr-only">(current)</span></a></li>
-                        <li><a href="content/analise/">Análise<span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">Upload<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Análise<span class="sr-only">(current)</span></a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Olá, <?php echo $_SESSION['nome']; ?><span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">                                
-                                <li><a href="content/usuario/">Minha Conta</a></li>
+                                <li><a href="#">Minha Conta</a></li>
                                 <li class="divider"></li>
-                                <li><a href="../logout.php">Sair</a></li>
+                                <li><a href="#">Sair</a></li>
                             </ul>
                         </li>
                     </ul>
