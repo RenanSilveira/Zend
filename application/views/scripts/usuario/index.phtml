@@ -1,5 +1,10 @@
-<br /><br />
 <div id="view-content">
-        <p>View do usuário</p>
+        <h2>View do usuário</h2>
 	<p>View script for controller <b>Usuario</b> and script/action name <b>index</b></p>
+        <?php
+        foreach($this->lista as $user){
+            echo "Nome: ". $user->nome. "</br>";
+            echo "Login: ". $user->login. "</br></br>";
+        }
+        ?>
 </div>

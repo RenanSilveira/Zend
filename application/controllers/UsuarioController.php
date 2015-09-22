@@ -18,6 +18,8 @@ class UsuarioController extends Zend_Controller_Action
     {
         // action body
         $this->logger->log('Mensagem debug', Zend_Log::DEBUG);
+        $dbUsuario = new Application_Model_DbTable_Usuario();
+        $this->view->lista = $dbUsuario->fetchAll();
     }
 
     public function newAction()
