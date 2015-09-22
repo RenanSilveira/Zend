@@ -28,3 +28,11 @@ table.borda tr td {/*border:1px solid #bfbfbf;*/ text-align: center;}
 .glyphicon{
     margin-right: 5px;
 }
+
+.ID{
+    display: none;
+}
+
+.funcoes{
+    width: 5%;
+}

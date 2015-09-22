@@ -7,11 +7,14 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th class="hidden-xs">ID</th>
+                    <th></th>
+                    <th></th>
+                    <th class="ID">ID</th>
                     <th>Nome</th>
                     <th>Login</th>
                     <th class="hidden-xs">Senha</th>
                     <th class="hidden-xs">Ativo</th>
+                    <th class="hidden-xs">Tipo</th>
                 </tr>
             </thead>
             <?php
@@ -19,11 +22,14 @@
                 echo('
                 <tbody>
                     <tr>
-                        <td class="hidden-xs">' . $user->id . '</td>
+                        <td class="funcoes"><span class="glyphicon glyphicon-pencil"></span></td>
+                        <td class="funcoes"><span class="glyphicon glyphicon-remove"></span></td>
+                        <td class="ID">' . $user->id . '</td>
                         <td>' . $user->nome . '</td>
                         <td>' . $user->login . '</td>
                         <td class="hidden-xs">' . $user->senha . '</td>
                         <td class="hidden-xs">' . $user->ativo . '</td>
+                        <td class="hidden-xs">' . $user->tipo . '</td>    
                     </tr>
                 </tbody>
                 ');
