@@ -1,10 +1,34 @@
 <div id="view-content">
-        <h2>View do usuário</h2>
-	<p>View script for controller <b>Usuario</b> and script/action name <b>index</b></p>
-        <?php
-        foreach($this->lista as $user){
-            echo "Nome: ". $user->nome. "</br>";
-            echo "Login: ". $user->login. "</br></br>";
-        }
-        ?>
+    <!--h2>View do usuário</h2>
+    <p>View script for controller <b>Usuario</b> and script/action name <b>index</b></p-->
+    <div class="container">
+        <h2>Usuários Cadastrados</h2>
+        <div class="cleaner h20"></div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="hidden-xs">ID</th>
+                    <th>Nome</th>
+                    <th>Login</th>
+                    <th class="hidden-xs">Senha</th>
+                    <th class="hidden-xs">Ativo</th>
+                </tr>
+            </thead>
+            <?php
+            foreach ($this->lista as $user) {
+                echo('
+                <tbody>
+                    <tr>
+                        <td class="hidden-xs">' . $user->id . '</td>
+                        <td>' . $user->nome . '</td>
+                        <td>' . $user->login . '</td>
+                        <td class="hidden-xs">' . $user->senha . '</td>
+                        <td class="hidden-xs">' . $user->ativo . '</td>
+                    </tr>
+                </tbody>
+                ');
+            }
+            ?>
+        </table>
+    </div>
 </div>
