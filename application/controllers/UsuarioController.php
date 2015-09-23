@@ -11,11 +11,13 @@ class UsuarioController extends Zend_Controller_Action {
         /* Initialize action controller here */
         $this->logger = Zend_Registry::get('logger');
         $this->dbUsuario = new Application_Model_DbTable_Usuario();
+        $this->dbTipo = new Application_Model_DbTable_Tipo();
     }
 
     public function indexAction() {
         $this->logger->log('Mensagem debug', Zend_Log::DEBUG);
-        $this->view->lista = $this->dbUsuario->fetchAll();
+        $dbUsuario = new Application_Model_DbTable_Usuario();
+        $this->view->lista = $dbUsuario->fetchAll();
     }
 
     public function newAction() {
