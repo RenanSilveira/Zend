@@ -4,7 +4,7 @@ class Application_Form_NewUsuario extends Zend_Form {
 
     public function init() {
         //nome do formulário
-        $this->setName('NewUsuario');
+        $this->setName('new');
         //elemento para o campo username
         $nome = new Zend_Form_Element_Text('Nome');
         $login = new Zend_Form_Element_Text('Login');
@@ -35,7 +35,7 @@ class Application_Form_NewUsuario extends Zend_Form {
         $this->addElements(array($nome, $login, $pass, $submit));
         
         //action e method
-        $this->setAction('delete')->setMethod('post');
+        $this->setAction('new')->setMethod('post');
     }
 
 }
