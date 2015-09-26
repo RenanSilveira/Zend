@@ -15,9 +15,9 @@ class UsuarioController extends Zend_Controller_Action {
     }
 
     public function indexAction() {
+        
         $this->logger->log('Mensagem debug', Zend_Log::DEBUG);
-        $dbUsuario = new Application_Model_DbTable_Usuario();
-        $this->view->lista = $dbUsuario->fetchAll();
+        $this->view->lista = $this->dbUsuario->fetchAll();
     }
 
     public function newAction() {
